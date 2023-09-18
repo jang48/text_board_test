@@ -5,10 +5,19 @@ public class Board {
     private String content;
     private int numid;
 
+    private String date;
+
     Board(int numid, String title, String content ){
         this.numid = numid;
         this.title = title;
         this.content = content;
+    }
+
+    Board(int numid, String title, String content, String date){
+        this.numid = numid;
+        this.title = title;
+        this.content = content;
+        this.date = date;
     }
 
     public String getTitle() {
@@ -33,5 +42,13 @@ public class Board {
 
     public void setNumid(int numid) {
         this.numid = numid;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }

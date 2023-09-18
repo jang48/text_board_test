@@ -1,13 +1,25 @@
 package main;
 
+import main.Util.util;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class text_board {
     ArrayList<Board> boards = new ArrayList<>();
-    int numid = 1;
+
+    util date = new util();
+    int numid = 4;
 
     public void start() {
+        Board a1 = new Board(1, "안녕하세요 반갑습니다. 자바 공부중이에요.", "a1", date.regdate());
+        Board a2 = new Board(2, "자바 질문좀 할게요~", "a2", date.regdate());
+        Board a3 = new Board(3, "정처기 따야되나요?", "a3", date.regdate());
+
+        boards.add(a1);
+        boards.add(a2);
+        boards.add(a3);
+
         Scanner sc = new Scanner(System.in);
         while (true) {
             System.out.print("명령어 : ");
@@ -22,7 +34,7 @@ public class text_board {
                 System.out.print("게시물 내용을 입력해주세요 : ");
                 String content = sc.nextLine();
 
-                Board article = new Board(numid, title, content);
+                Board article = new Board(numid, title, content,date.regdate());
                 boards.add(article);
                 numid++;
                 System.out.println("게시물이 등록되었습니다.");
@@ -84,6 +96,7 @@ public class text_board {
         System.out.printf("번호 : %d\n", board.getNumid());
         System.out.printf("제목 : %s\n", board.getTitle());
         System.out.printf("내용 : %s\n", board.getContent());
+        System.out.printf("등록날짜 : %s\n", board.getDate());
         System.out.println("==================");
     }
 

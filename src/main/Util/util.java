@@ -6,7 +6,7 @@ import java.time.format.DateTimeFormatter;
 public class util {
     public String regdate(){
         LocalDateTime now = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy.MM.dd hh:mm:dd");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy.MM.dd hh:mm:ss");
         String regdate = now.format(formatter);
         return regdate;
     }
