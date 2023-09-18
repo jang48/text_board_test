@@ -1,4 +1,4 @@
-package main;
+package main.Controller;
 
 public class Board {
     private String title;
@@ -7,13 +7,13 @@ public class Board {
 
     private String date;
 
-    Board(int numid, String title, String content ){
+    public Board(int numid, String title, String content){
         this.numid = numid;
         this.title = title;
         this.content = content;
     }
 
-    Board(int numid, String title, String content, String date){
+    public Board(int numid, String title, String content, String date){
         this.numid = numid;
         this.title = title;
         this.content = content;
