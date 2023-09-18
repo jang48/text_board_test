@@ -77,6 +77,10 @@ public class text_board {
                 } else {
                     view1.getArticledetail(article6);
                 }
+            } else if (commend.equals("search")){
+                System.out.print("검색 키워드를 입력해주세요 : ");
+                String keyword = sc.nextLine();
+                contrl.getKeywordlist(keyword);
             }
         }
     }

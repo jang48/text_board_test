@@ -51,4 +51,5 @@ public class Board {
     public void setDate(String date) {
         this.date = date;
     }
+
 }

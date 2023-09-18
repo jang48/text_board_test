@@ -56,4 +56,16 @@ public class Controller2 {
         return article;
     }
 
+    public void getKeywordlist(String keyword){
+        for(int i = 0 ; i < boards.size(); i++){
+            Board article6 = boards.get(i);
+            if(article6.getTitle().contains(keyword)){
+                System.out.println("==================");
+                System.out.printf("번호 : %d\n", article6.getNumid());
+                System.out.printf("제목 : %s\n", article6.getTitle());
+                System.out.println("==================");
+            }
+        }
+    }
+
 }
